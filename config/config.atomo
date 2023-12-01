@@ -1,0 +1,10 @@
+folder=/admin
+version=1.0.0
+protocol=https
+debug=1
+login_access_status=1
+login_access_name=user
+login_access_module=auth
+login_access_view=entrar
+default_module=login
+engine_db=pdo-mysql

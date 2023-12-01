@@ -1,2 +1,2 @@
-# CyberPay
-Cyber panel payment system
+# whatvendas
+sistema de vendas pelo whatsapp

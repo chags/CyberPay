@@ -1,0 +1,52 @@
+[10-Oct-2023 12:01:08 UTC] PHP Notice:  Trying to access array offset on value of type bool in /home/aerservicos/public_html/admin/modules/orcamento/models/orcamento.php on line 61
+[10-Oct-2023 12:01:08 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/aerservicos/public_html/admin/modules/orcamento/models/orcamento.php on line 61
+[10-Oct-2023 12:01:08 UTC] PHP Notice:  Trying to access array offset on value of type bool in /home/aerservicos/public_html/admin/modules/orcamento/models/orcamento.php on line 62
+[10-Oct-2023 12:01:08 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/aerservicos/public_html/admin/modules/orcamento/models/orcamento.php on line 62
+[10-Oct-2023 12:01:08 UTC] PHP Notice:  Trying to access array offset on value of type bool in /home/aerservicos/public_html/admin/modules/orcamento/models/orcamento.php on line 63
+[10-Oct-2023 12:01:08 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/aerservicos/public_html/admin/modules/orcamento/models/orcamento.php on line 63
+[10-Oct-2023 12:01:08 UTC] PHP Notice:  Trying to access array offset on value of type bool in /home/aerservicos/public_html/admin/modules/orcamento/models/orcamento.php on line 65
+[10-Oct-2023 12:01:08 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/aerservicos/public_html/admin/modules/orcamento/models/orcamento.php on line 65
+[10-Oct-2023 12:01:08 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect integer value: '' for column `aerservicos_aer`.`itens`.`item_produto_id` at row 1 in /home/aerservicos/public_html/admin/core/src/db/mysql/DB.php:33
+Stack trace:
+#0 /home/aerservicos/public_html/admin/core/src/db/mysql/DB.php(33): PDOStatement->execute()
+#1 /home/aerservicos/public_html/admin/modules/orcamento/models/orcamento.php(67): DB->insert('itens', Array, NULL, NULL)
+#2 /home/aerservicos/public_html/admin/modules/orcamento/controllers/inserir_orcamento.php(11): Orcamento->InserirOrcamento()
+#3 {main}
+  thrown in /home/aerservicos/public_html/admin/core/src/db/mysql/DB.php on line 33
+[10-Oct-2023 12:01:12 UTC] PHP Notice:  Trying to access array offset on value of type bool in /home/aerservicos/public_html/admin/modules/orcamento/models/orcamento.php on line 61
+[10-Oct-2023 12:01:12 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/aerservicos/public_html/admin/modules/orcamento/models/orcamento.php on line 61
+[10-Oct-2023 12:01:12 UTC] PHP Notice:  Trying to access array offset on value of type bool in /home/aerservicos/public_html/admin/modules/orcamento/models/orcamento.php on line 62
+[10-Oct-2023 12:01:12 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/aerservicos/public_html/admin/modules/orcamento/models/orcamento.php on line 62
+[10-Oct-2023 12:01:12 UTC] PHP Notice:  Trying to access array offset on value of type bool in /home/aerservicos/public_html/admin/modules/orcamento/models/orcamento.php on line 63
+[10-Oct-2023 12:01:12 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/aerservicos/public_html/admin/modules/orcamento/models/orcamento.php on line 63
+[10-Oct-2023 12:01:12 UTC] PHP Notice:  Trying to access array offset on value of type bool in /home/aerservicos/public_html/admin/modules/orcamento/models/orcamento.php on line 65
+[10-Oct-2023 12:01:12 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/aerservicos/public_html/admin/modules/orcamento/models/orcamento.php on line 65
+[10-Oct-2023 12:01:12 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect integer value: '' for column `aerservicos_aer`.`itens`.`item_produto_id` at row 1 in /home/aerservicos/public_html/admin/core/src/db/mysql/DB.php:33
+Stack trace:
+#0 /home/aerservicos/public_html/admin/core/src/db/mysql/DB.php(33): PDOStatement->execute()
+#1 /home/aerservicos/public_html/admin/modules/orcamento/models/orcamento.php(67): DB->insert('itens', Array, NULL, NULL)
+#2 /home/aerservicos/public_html/admin/modules/orcamento/controllers/inserir_orcamento.php(11): Orcamento->InserirOrcamento()
+#3 {main}
+  thrown in /home/aerservicos/public_html/admin/core/src/db/mysql/DB.php on line 33
+[10-Oct-2023 12:01:15 UTC] PHP Notice:  Trying to access array offset on value of type bool in /home/aerservicos/public_html/admin/modules/orcamento/models/orcamento.php on line 61
+[10-Oct-2023 12:01:15 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/aerservicos/public_html/admin/modules/orcamento/models/orcamento.php on line 61
+[10-Oct-2023 12:01:15 UTC] PHP Notice:  Trying to access array offset on value of type bool in /home/aerservicos/public_html/admin/modules/orcamento/models/orcamento.php on line 62
+[10-Oct-2023 12:01:15 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/aerservicos/public_html/admin/modules/orcamento/models/orcamento.php on line 62
+[10-Oct-2023 12:01:15 UTC] PHP Notice:  Trying to access array offset on value of type bool in /home/aerservicos/public_html/admin/modules/orcamento/models/orcamento.php on line 63
+[10-Oct-2023 12:01:15 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/aerservicos/public_html/admin/modules/orcamento/models/orcamento.php on line 63
+[10-Oct-2023 12:01:15 UTC] PHP Notice:  Trying to access array offset on value of type bool in /home/aerservicos/public_html/admin/modules/orcamento/models/orcamento.php on line 65
+[10-Oct-2023 12:01:15 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/aerservicos/public_html/admin/modules/orcamento/models/orcamento.php on line 65
+[10-Oct-2023 12:01:15 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect integer value: '' for column `aerservicos_aer`.`itens`.`item_produto_id` at row 1 in /home/aerservicos/public_html/admin/core/src/db/mysql/DB.php:33
+Stack trace:
+#0 /home/aerservicos/public_html/admin/core/src/db/mysql/DB.php(33): PDOStatement->execute()
+#1 /home/aerservicos/public_html/admin/modules/orcamento/models/orcamento.php(67): DB->insert('itens', Array, NULL, NULL)
+#2 /home/aerservicos/public_html/admin/modules/orcamento/controllers/inserir_orcamento.php(11): Orcamento->InserirOrcamento()
+#3 {main}
+  thrown in /home/aerservicos/public_html/admin/core/src/db/mysql/DB.php on line 33
+[10-Oct-2023 12:11:28 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect integer value: '' for column `aerservicos_aer`.`orcamentos`.`orcamento_cliente_id` at row 1 in /home/aerservicos/public_html/admin/core/src/db/mysql/DB.php:33
+Stack trace:
+#0 /home/aerservicos/public_html/admin/core/src/db/mysql/DB.php(33): PDOStatement->execute()
+#1 /home/aerservicos/public_html/admin/modules/orcamento/models/orcamento.php(32): DB->insert('orcamentos', Array, NULL, NULL)
+#2 /home/aerservicos/public_html/admin/modules/orcamento/controllers/inserir_orcamento.php(11): Orcamento->InserirOrcamento()
+#3 {main}
+  thrown in /home/aerservicos/public_html/admin/core/src/db/mysql/DB.php on line 33
