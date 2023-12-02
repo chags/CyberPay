@@ -1,10 +1,10 @@
-folder=/admin
+folder=/cyberpay
 version=1.0.0
-protocol=https
+protocol=http
 debug=1
 login_access_status=1
 login_access_name=user
 login_access_module=auth
 login_access_view=entrar
-default_module=login
+default_module=web
 engine_db=pdo-mysql

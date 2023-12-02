@@ -1,4 +1,4 @@
 dbhost=localhost
-dbname=aerservicos_aer
-dbuser=aerservicos_aer
-dbpass=@harpia489
+dbname=db_cyberpay
+dbuser=root
+dbpass=

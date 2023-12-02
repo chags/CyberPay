@@ -1,0 +1,8 @@
+name=web
+version=1.0.0
+app=host
+visibility=public
+use_helper=1
+use_session=0
+default_view=host
+view_not_found=404

@@ -1,2 +1,2 @@
-# whatvendas
-sistema de vendas pelo whatsapp
+# Cyber Pay
+Systemas de vendas de hospedagem pelo painel cyber panel

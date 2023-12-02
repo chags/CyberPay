@@ -99,6 +99,40 @@
 
 
 		]
+	},
+	"cybertheme": {
+		"css":[
+			"public/cybertheme/assets/web/assets/mobirise-icons2/mobirise2.css",
+			"public/cybertheme/assets/tether/tether.min.css",
+			"public/cybertheme/assets/bootstrap/css/bootstrap.min.css",
+			"public/cybertheme/assets/bootstrap/css/bootstrap-grid.min.css",
+			"public/cybertheme/assets/bootstrap/css/bootstrap-reboot.min.css",
+			"public/cybertheme/assets/popup-overlay-plugin/style.css",
+			"public/cybertheme/assets/dropdown/css/style.css",
+			"public/cybertheme/assets/socicon/css/styles.css",
+			"public/cybertheme/assets/theme/css/style.css",
+			"https://fonts.googleapis.com/css?family=Bellota+Text:300,300i,400,400i,700,700i&display=swap",
+			"https://fonts.googleapis.com/css?family=Bellota+Text:300,300i,400,400i,700,700i&display=swap",
+			"public/cybertheme/assets/mobirise/css/mbr-additional.css"
+
+		],
+		"js":[
+			"public/cybertheme/assets/web/assets/jquery/jquery.min.js",
+			"public/cybertheme/assets/popper/popper.min.js",
+			"public/cybertheme/assets/tether/tether.min.js",
+			"public/cybertheme/assets/bootstrap/js/bootstrap.min.js",
+			"public/cybertheme/assets/smoothscroll/smooth-scroll.js",
+			"public/cybertheme/assets/dropdown/js/nav-dropdown.js",
+			"public/cybertheme/assets/dropdown/js/navbar-dropdown.js",
+			"public/cybertheme/assets/touchswipe/jquery.touch-swipe.min.js",
+			"public/cybertheme/assets/ytplayer/index.js",
+			"public/cybertheme/assets/vimeoplayer/jquery.mb.vimeo_player.js",
+			"public/cybertheme/assets/playervimeo/vimeo_player.js",
+			"public/cybertheme/assets/bootstrapcarouselswipe/bootstrap-carousel-swipe.js",
+			"public/cybertheme/assets/mbr-testimonials-slider/mbr-testimonials-slider.js",
+			"public/cybertheme/assets/sociallikes/social-likes.js",
+			"public/cybertheme/assets/theme/js/script.js"
+		]
 	}
 
 }
