@@ -67,7 +67,7 @@
                     
                     
                 </div>
-                <div class="navbar-buttons mbr-section-btn"><a class="btn btn-primary display-4" href="#">
+                <div class="navbar-buttons mbr-section-btn"><a class="btn btn-primary display-4" href="<?=$app->view('access', 'login'); ?>">
                         Sign up</a></div>
             </div>
         </div>

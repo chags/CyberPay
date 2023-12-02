@@ -13,17 +13,17 @@ $app = new Module();
                     </a>
                 </li>
                 <li class=" nav-item">
-                    <a href="<?=$app->view('lista-clientes'); ?>">
+                    <a href="<?=$app->view('list-clients'); ?>">
                         <i class="la la-users"></i><span class="menu-title" >Clientes</span>
                     </a>
                 </li>  
                 <li class=" nav-item">
-                    <a href="<?=$app->view('listar-produtos'); ?>">
-                        <i class="la la-barcode"></i><span class="menu-title" >Produtos</span>
+                    <a href="<?=$app->view('list-packages'); ?>">
+                        <i class="la la-barcode"></i><span class="menu-title" >Pacotes</span>
                     </a>
                 </li>                
                 <li class=" nav-item">
-                    <a href="<?=$app->view('lista-usuarios'); ?>">
+                    <a href="<?=$app->view('list-user'); ?>">
                         <i class="la la-user"></i><span class="menu-title" >Usuários</span>
                     </a>
                 </li>                              

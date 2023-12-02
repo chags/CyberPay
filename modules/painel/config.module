@@ -1,8 +1,0 @@
-name=painel
-version=1.0.0
-app=painel
-visibility=public
-use_helper=1
-use_session=0
-default_view=app
-view_not_found=404

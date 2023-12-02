@@ -19,9 +19,9 @@
 		
 		# default routes
 		$template->set([
-			'acesso' => [
-				'title'   => 'Entrar',
-				'file' 	  => 'acesso',
+			'access' => [
+				'title'   => 'Access',
+				'file' 	  => 'access',
 			    'packages' => ['login']				
 			],
 			'cadastro' => [

@@ -28,20 +28,6 @@
 			}
 		}
 
-		
-
-		public static function imgprod($name = "")
-		{
-			$app = new Module();
-			$pathImg = $app->path() . "/storage/imgprod/" . $name;
-			$indexImg = $app->index() . "/storage/imgprod/" . $name;
-			$defaultImg = $app->index() . "/storage/imgprod/produto.png";
-			if( $name != "" ){
-				return (file_exists($pathImg) and is_file($pathImg)) ? $indexImg : $defaultImg;
-			}else{
-				return $defaultImg;
-			}
-		}
 
 		public static function imagem($name = "")
 		{
@@ -55,48 +41,12 @@
 				return $defaultImg;
 			}
 		}
-		public static function brazao($name = "")
+		public static function logo($name = "")
 		{
 			$app = new Module();
-			$pathImg = $app->path() . "/storage/brazao/" . $name;
-			$indexImg = $app->index() . "/storage/brazao/" . $name;
-			$defaultImg = $app->index() . "/storage/imagem/linux.png";
-			if( $name != "" ){
-				return (file_exists($pathImg) and is_file($pathImg)) ? $indexImg : $defaultImg;
-			}else{
-				return $defaultImg;
-			}
-		}
- 		public static function avatar($name = "")
-		{
-			$app = new Module();
-			$pathImg = $app->path() . "/storage/avatar/" . $name;
-			$indexImg = $app->index() . "/storage/avatar/" . $name;
-			$defaultImg = $app->index() . "/storage/avatar/avatar.png";
-			if( $name != "" ){
-				return (file_exists($pathImg) and is_file($pathImg)) ? $indexImg : $defaultImg;
-			}else{
-				return $defaultImg;
-			}
-		}
-		public static function trunfo($name = "")
-		{
-			$app = new Module();
-			$pathImg = $app->path() . "/storage/trunfo/" . $name;
-			$indexImg = $app->index() . "/storage/trunfo/" . $name;
-			$defaultImg = $app->index() . "/storage/trunfo/linux.png";
-			if( $name != "" ){
-				return (file_exists($pathImg) and is_file($pathImg)) ? $indexImg : $defaultImg;
-			}else{
-				return $defaultImg;
-			}
-		}
-		public static function imageRequisito($name = "")
-		{
-			$app = new Module();
-			$pathImg = $app->path() . "/storage/imageRequisito/" . $name;
-			$indexImg = $app->index() . "/storage/imageRequisito/" . $name;
-			$defaultImg = $app->index() . "/storage/imageRequisito/requisito.png";
+			$pathImg = $app->path() . "/storage/logo/" . $name;
+			$indexImg = $app->index() . "/storage/logo/" . $name;
+			$defaultImg = $app->index() . "/storage/logo/logo-cyberpay.png";
 			if( $name != "" ){
 				return (file_exists($pathImg) and is_file($pathImg)) ? $indexImg : $defaultImg;
 			}else{

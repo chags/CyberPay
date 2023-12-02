@@ -16,8 +16,8 @@ $user = $_SESSION;
 	# include all modules of default module
 	$app->loadModels('login');
 
-	$data = new Usuarios(); 
-	$log = $data->DestroiSession($user['id_usuario']);
+	$data = new User(); 
+	//$log = $data->DestroiSession($user['id_user']);
 
 
 

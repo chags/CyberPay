@@ -17,14 +17,14 @@
 	//print_r($_POST);
 
 
-    $dados = new Usuario();
+    $dados = new User();
 
-    $log = $dados->CadastrarUsuario();
+    $log = $dados->CadastrarUser();
 
   //print_r($response);
 
   if( $log["erro"] == false ){
-    header("location: " . $app->index() . "/painel/acesso" . Helper::notification(true,$log["mensagem"]));
+    header("location: " . $app->index() . "/panel/acesso" . Helper::notification(true,$log["mensagem"]));
 }else{
     header("location: " . $app->index() . "/login/perfil" . Helper::notification(false, $log["mensagem"]));
 }
