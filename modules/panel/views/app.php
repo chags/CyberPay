@@ -6,7 +6,7 @@ $app = new Module();
             <!-- Hospital Info cards -->
             <div class="row">
                 <div class="col-xl-3 col-lg-6 col-md-6 col-12">
-                    <a href="<?=$app->view('listar-orcamentos'); ?>">
+                    <a href="<?=$app->view('list-orders'); ?>">
                         <div class="card pull-up">
                             <div class="card-content">
                                 <div class="card-body">
@@ -15,7 +15,7 @@ $app = new Module();
                                         <i class="la la-cart-plus font-large-2 success"></i>
                                         </div>
                                         <div class="media-body text-right">
-                                            <h5 class="text-muted text-bold-500">Orçamentos&nbsp;&nbsp;</h5>
+                                            <h5 class="text-muted text-bold-500">Pedidos&nbsp;&nbsp;</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -24,7 +24,7 @@ $app = new Module();
                     </a>
                 </div>
                 <div class="col-xl-3 col-lg-6 col-md-6 col-12">
-                <a href="<?=$app->view('listar-produtos'); ?>">
+                <a href="<?=$app->view('list-package'); ?>">
                     <div class="card pull-up">
                         <div class="card-content">
                             <div class="card-body">
@@ -33,7 +33,7 @@ $app = new Module();
                                         <i class="la la-barcode font-large-2 warning"></i>
                                     </div>
                                     <div class="media-body text-right">
-                                        <h5 class="text-muted text-bold-500">Produtos</h5>
+                                        <h5 class="text-muted text-bold-500">Packages</h5>
                                     </div>
                                 </div>
                             </div>
@@ -42,7 +42,7 @@ $app = new Module();
                     </a>
                 </div>
                 <div class="col-xl-3 col-lg-6 col-md-6 col-12">
-                <a href="<?=$app->view('lista-clientes'); ?>">
+                <a href="<?=$app->view('list-clients'); ?>">
                     <div class="card pull-up">
                         <div class="card-content">
                             <div class="card-body">
@@ -60,7 +60,7 @@ $app = new Module();
                     </a>
                 </div>
                 <div class="col-xl-3 col-lg-6 col-md-6 col-12">
-                <a href="<?=$app->view('lista-usuarios'); ?>">
+                <a href="<?=$app->view('list-users'); ?>">
                     <div class="card pull-up">
                         <div class="card-content">
                             <div class="card-body">

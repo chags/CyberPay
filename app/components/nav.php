@@ -7,7 +7,7 @@ $dados = $data->EditCompany();
 //print_r($dados);
 ?>
 
-<nav class="header-navbar navbar-expand-md navbar navbar-with-menu navbar-without-dd-arrow fixed-top navbar-semi-light bg-warning navbar-shadow">
+<nav class="header-navbar navbar-expand-md navbar navbar-with-menu navbar-without-dd-arrow fixed-top navbar-semi-light bg-info navbar-shadow">
         <div class="navbar-wrapper">
             <div class="navbar-header">
                 <ul class="nav navbar-nav flex-row">
@@ -29,6 +29,7 @@ $dados = $data->EditCompany();
                         <li class="dropdown dropdown-user nav-item"><a class="dropdown-toggle nav-link dropdown-user-link" href="#" data-toggle="dropdown"><span class="mr-1 user-name text-bold-700"><?=$user['user_name']; ?></span><span class="avatar avatar-<?=$x = $user['user_session']  == null ? "off" : "online" ?> "><img src="<?=helper::imagem($user['user_image']); ?>" alt="avatar"><i></i></span></a>
                             <div class="dropdown-menu dropdown-menu-right">
                                 <a class="dropdown-item" href="<?=$app->view('company'); ?>"><i class="ft-user"></i>Empresa</a>
+                                <a class="dropdown-item" href="<?=$app->view('configuration'); ?>"><i class="ft-user"></i>Configuration</a>
                                 <div class="dropdown-divider"></div><a class="dropdown-item" href="<?=$app->controller('logout', 'login'); ?>"><i class="ft-power"></i> Sair</a>
                             </div>
                         </li>

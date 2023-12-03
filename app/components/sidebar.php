@@ -8,7 +8,7 @@ $app = new Module();
         <div class="main-menu-content">
             <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
                 <li class=" nav-item">
-                    <a href="<?=$app->view('listar-orcamentos'); ?>">
+                    <a href="<?=$app->view('list-order'); ?>">
                         <i class="la la-cart-arrow-down"></i><span class="menu-title" >Orçamentos</span>
                     </a>
                 </li>
@@ -23,7 +23,7 @@ $app = new Module();
                     </a>
                 </li>                
                 <li class=" nav-item">
-                    <a href="<?=$app->view('list-user'); ?>">
+                    <a href="<?=$app->view('list-users'); ?>">
                         <i class="la la-user"></i><span class="menu-title" >Usuários</span>
                     </a>
                 </li>                              

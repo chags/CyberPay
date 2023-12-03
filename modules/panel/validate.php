@@ -24,9 +24,14 @@
 				'file' 	  => 'app',
 			    'packages' => ['modern']				
 			],
-			'empresa' => [
-				'title'   => 'Empresa',
-				'file' 	  => 'empresa',
+			'company' => [
+				'title'   => 'company',
+				'file' 	  => 'company',
+			    'packages' => ['modern']				
+			],
+			'configuration' => [
+				'title'   => 'Configuration',
+				'file' 	  => 'configuration',
 			    'packages' => ['modern']				
 			],
 			'form' => [
@@ -39,61 +44,67 @@
 				'file' 	  => 'table',
 			    'packages' => ['modern-table']				
 			],			
-			'listar-produtos' => [
-				'title'   => 'Lista de Produtos',
-				'file' 	  => 'listar-produtos',
+			'listar-packages' => [
+				'title'   => 'Lista de Pacotes',
+				'file' 	  => 'list-packages',
 			    'packages' => ['modern-table']				
 			],			
-			'inserir-produtos' => [
+			'insert-packages' => [
 				'title'   => 'Inserir Produto',
 				'file' 	  => 'inserir-produtos',
 			    'packages' => ['modern-table']				
 			],			
-			'editar-produtos' => [
+			'edit-packages' => [
 				'title'   => 'Editar Produto',
 				'file' 	  => 'editar-produtos',
 			    'packages' => ['modern-table']				
 			],			
-			'lista-usuarios' => [
+			'list-users' => [
 				'title'   => 'Lista Usuarios',
-				'file' 	  => 'lista-usuarios',
+				'file' 	  => 'list-users',
 			    'packages' => ['modern-table']				
 			],			
-			'inserir-usuario' => [
+			'insert-user' => [
 				'title'   => 'Inserir Usuario',
 				'file' 	  => 'inserir-usuario',
 			    'packages' => ['modern-table']				
 			],			
-			'editar-usuario' => [
+			'edit-user' => [
 				'title'   => 'Editar Usuario',
 				'file' 	  => 'editar-usuario',
 			    'packages' => ['modern-table']				
 			],						
-			'listar-orcamentos' => [
+			'list-orde' => [
 				'title'   => 'Lista Orcamentos',
 				'file' 	  => 'listar-orcamentos',
 			    'packages' => ['modern-table']				
 			],	
-			'lista-clientes' => [
+			'list-clients' => [
 				'title'   => 'Lista Cliente',
-				'file' 	  => 'lista-clientes',
+				'file' 	  => 'list-clients',
 			    'packages' => ['modern-table']				
 			],	
-			'editar-cliente' => [
+			'edit-client' => [
 				'title'   => 'Editar Cliente',
 				'file' 	  => 'editar-cliente',
 			    'packages' => ['modern-table']				
 			],					
-			'inserir-cliente' => [
+			'insert-client' => [
 				'title'   => 'Inserir Cliente',
 				'file' 	  => 'inserir-cliente',
 			    'packages' => ['modern-table']				
 			],	
-			'editar-configuracao' => [
+			'edit-config' => [
 				'title'   => 'Editar configuração do orcamento',
 				'file' 	  => 'editar-configuracao',
 			    'packages' => ['modern-table']				
-			]							
+			],						
+			'list-packages' => [
+				'title'   => 'Lista Pacotes',
+				'file' 	  => 'list-packages',
+			    'packages' => ['modern-table']				
+			],
+
 		]);
 		$template->error([
 			'title' => 'Falha na geração da pagina',
