@@ -86,12 +86,12 @@
 			],	
 			'edit-client' => [
 				'title'   => 'Editar Cliente',
-				'file' 	  => 'editar-cliente',
+				'file' 	  => 'edit-client',
 			    'packages' => ['modern-table']				
 			],					
 			'insert-client' => [
 				'title'   => 'Inserir Cliente',
-				'file' 	  => 'inserir-cliente',
+				'file' 	  => 'insert-client',
 			    'packages' => ['modern-table']				
 			],	
 			'edit-config' => [
@@ -104,7 +104,21 @@
 				'file' 	  => 'list-packages',
 			    'packages' => ['modern-table']				
 			],
-
+			'list-sites' => [
+				'title'   => 'Lista Sites',
+				'file' 	  => 'list-sites',
+			    'packages' => ['modern-table']				
+			],
+			'packages' => [
+				'title'   => 'Pacotes',
+				'file' 	  => 'packages',
+			    'packages' => ['modern-table']				
+			],
+			'pay' => [
+				'title'   => 'Pagamento',
+				'file' 	  => 'pay',
+			    'packages' => ['modern-table']				
+			],			
 		]);
 		$template->error([
 			'title' => 'Falha na geração da pagina',

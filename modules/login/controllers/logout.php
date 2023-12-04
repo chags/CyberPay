@@ -26,5 +26,5 @@ $user = $_SESSION;
     session_destroy();
 
     #deslogando usuario do sistema
-    header("location: " . $app->index() . "/login/acesso" . Helper::notification(true,"você saiu do sistema"));
+    header("location: " . $app->index() . "/login/access" . Helper::notification(true,"você saiu do sistema"));
 

@@ -29,93 +29,83 @@ $app = new Module();
                         <div class="card-body">
                             <div class="card-text">
                             </div>
-                            <form class="form form-horizontal" action="<?=$app->controller('inserir_cliente'); ?>" method="POST">
+                            <form class="form form-horizontal" action="<?=$app->controller('insert_client'); ?>" method="POST">
                                 <div class="form-body">
                                     <h4 class="form-section"><i class="ft-user"></i> Informações Pessoais</h4>
+                                                                   
                                     <div class="form-group row">
-                                        <label class="col-md-3 label-control" for="projectinput1">CNPJ</label>
+                                        <label class="col-md-3 label-control" >Name</label>
                                         <div class="col-md-9 mx-auto">
-                                            <input type="text" name="cliente_cnpj" id="cnpj" class="form-control round" placeholder="Digite o CNPJ" required>
-                                        </div>
-                                    </div>                                                                    
-                                    <div class="form-group row">
-                                        <label class="col-md-3 label-control" for="projectinput1">Nome Responsável</label>
-                                        <div class="col-md-9 mx-auto">
-                                            <input type="text" name="cliente_nome" id="projectinput1" class="form-control round" placeholder="Nome do Resposável" required>
+                                            <input type="text" name="user_name"  class="form-control round" placeholder="Nome do Resposável" required>
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label class="col-md-3 label-control" for="projectinput1">Nome da Empresa</label>
+                                        <label class="col-md-3 label-control" >e-mail</label>
                                         <div class="col-md-9 mx-auto">
-                                            <input type="text" name="cliente_razao_social" id="projectinput1" class="form-control round" placeholder="Digite o nome da Empresa" required>
+                                            <input type="mail" name="user_email"  class="form-control round" placeholder="Nome do Resposável" required>
                                         </div>
-                                    </div> 
+                                    </div>                                                                      
                                     <div class="form-group row">
-                                        <label class="col-md-3 label-control" for="projectinput1">Inscreição estadual</label>
+                                        <label class="col-md-3 label-control" >Senha</label>
                                         <div class="col-md-9 mx-auto">
-                                            <input type="text" name="cliente_inscricao" id="projectinput1" class="form-control round" placeholder="Digite Inscrição estadual">
+                                            <input type="password" name="user_password"  class="form-control round" placeholder="Nome do Resposável" required>
                                         </div>
-                                    </div>                                                                        
+                                    </div>
+
                                     <div class="form-group row">
-                                        <label class="col-md-3 label-control" for="projectinput2">Nome Fantasia</label>
+                                        <label class="col-md-3 label-control" >Telefone</label>
                                         <div class="col-md-9 mx-auto">
-                                            <input type="text" name="cliente_nome_fantasia" id="projectinput2" class="form-control round" placeholder="Digite o nome fantasia" >
+                                            <input type="mail" name="user_phone"  class="form-control round" placeholder="Digite o telefone" required>
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label class="col-md-3 label-control" for="projectinput3">Telefone</label>
+                                        <label class="col-md-3 label-control" >CEP</label>
                                         <div class="col-md-9 mx-auto">
-                                            <input type="mail" name="cliente_telefone" id="projectinput3" class="form-control round" placeholder="Digite o telefone" required>
+                                            <input type="text" name="address_zipcode"  class="form-control round" placeholder="Digite o CEP" required>
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label class="col-md-3 label-control" for="projectinput3">E-mail</label>
+                                        <label class="col-md-3 label-control" >Logradouro</label>
                                         <div class="col-md-9 mx-auto">
-                                            <input type="mail" name="cliente_email" id="projectinput3" class="form-control round" placeholder="Digite seu e-mail" required>
+                                            <input type="text" name="address_street"  class="form-control round" placeholder="Digite o logradouro" required>
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label class="col-md-3 label-control" for="projectinput3">CEP</label>
+                                        <label class="col-md-3 label-control" >Numero</label>
                                         <div class="col-md-9 mx-auto">
-                                            <input type="text" name="cliente_CEP" id="projectinput3" class="form-control round" placeholder="Digite o CEP" required>
+                                            <input type="text" name="address_number" class="form-control round" placeholder="Digite o numero" required>
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label class="col-md-3 label-control" for="projectinput3">Logradouro</label>
+                                        <label class="col-md-3 label-control" >complemento</label>
                                         <div class="col-md-9 mx-auto">
-                                            <input type="text" name="cliente_logradouro" id="projectinput3" class="form-control round" placeholder="Digite o logradouro" required>
+                                            <input type="text" name="address_complement"  class="form-control round" placeholder="Digite complemento">
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label class="col-md-3 label-control" for="projectinput3">Numero</label>
+                                        <label class="col-md-3 label-control" >Bairro</label>
                                         <div class="col-md-9 mx-auto">
-                                            <input type="text" name="cliente_numero" id="projectinput3" class="form-control round" placeholder="Digite o numero" required>
+                                            <input type="text" name="address_neighborhood"  class="form-control round" placeholder="Digite bairro" required>
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label class="col-md-3 label-control" for="projectinput3">complemento</label>
+                                        <label class="col-md-3 label-control" >Cidade</label>
                                         <div class="col-md-9 mx-auto">
-                                            <input type="text" name="cliente_complemento" id="projectinput3" class="form-control round" placeholder="Digite complemento">
+                                            <input type="text" name="address_city" class="form-control round" placeholder="Digite a cidade" required>
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label class="col-md-3 label-control" for="projectinput3">Bairro</label>
+                                        <label class="col-md-3 label-control" >Estado</label>
                                         <div class="col-md-9 mx-auto">
-                                            <input type="text" name="cliente_bairro" id="projectinput3" class="form-control round" placeholder="Digite bairro" required>
+                                            <input type="text" name="address_state" class="form-control round" placeholder="Digite se" required>
                                         </div>
-                                    </div>
+                                    </div>  
                                     <div class="form-group row">
-                                        <label class="col-md-3 label-control" for="projectinput3">Cidade</label>
+                                        <label class="col-md-3 label-control" >país</label>
                                         <div class="col-md-9 mx-auto">
-                                            <input type="text" name="cliente_municipio" id="projectinput3" class="form-control round" placeholder="Digite a cidade" required>
+                                            <input type="text" name="address_country" class="form-control round" placeholder="Digite se" required>
                                         </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="col-md-3 label-control" for="projectinput3">Estado</label>
-                                        <div class="col-md-9 mx-auto">
-                                            <input type="text" name="cliente_uf" id="projectinput3" class="form-control round" placeholder="Digite se">
-                                        </div>
-                                    </div>                                                                       
+                                    </div>                                     
                                     <div class="form-actions">
                                         <a href="<?= $app->view('lista-usuario'); ?>" class="btn btn-warning mr-1">
                                             <i class="ft-x"></i> Cancelar

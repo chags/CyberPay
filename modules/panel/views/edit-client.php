@@ -1,12 +1,10 @@
 <?php
 $template = new TEngine();
 $app = new Module();
-$data = new Clientes();
-$c = $data->EditarCliente($app->uri(3));
+$data = new Client();
+$c = $data->EditClient($app->uri(3));
 ?>
-
 <div class="content-header-right col-md-6 col-12">
-
 </div>
 </div>
 <div class="content-body">
@@ -31,96 +29,85 @@ $c = $data->EditarCliente($app->uri(3));
                         <div class="card-body">
                             <div class="card-text">
                             </div>
-                            <form class="form form-horizontal" action="<?=$app->controller('editar_cliente'); ?>" method="POST">
-                                <input type="hidden" name="id_cliente"   value="<?=$app->uri(3); ?>" required>
-                            <div class="form-body"> 
+                            <form class="form form-horizontal" action="<?=$app->controller('update_client'); ?>" method="POST">
+                                <div class="form-body">
                                     <h4 class="form-section"><i class="ft-user"></i> Informações Pessoais</h4>
+                                    <input type="hidden" name="id_user"  value="<?=$c['id_user']; ?>" required>                        
                                     <div class="form-group row">
-                                        <label class="col-md-3 label-control" for="projectinput1">CNPJ</label>
+                                        <label class="col-md-3 label-control" >Name</label>
                                         <div class="col-md-9 mx-auto">
-                                            <input type="text" name="cliente_cnpj"  id="cnpj" value="<?=$c['cliente_cnpj']; ?>"  class="form-control round" placeholder="Digite o CNPJ" required>
-                                        </div>
-                                    </div>                                                                    
-                                    <div class="form-group row">
-                                        <label class="col-md-3 label-control" for="projectinput1">Nome Responsável</label>
-                                        <div class="col-md-9 mx-auto">
-                                            <input type="text" name="cliente_nome" value="<?=$c['cliente_nome']; ?>"   class="form-control round" placeholder="Nome do Resposável" required>
+                                            <input type="text" name="user_name"  class="form-control round" value="<?=$c['user_name']; ?>" required>
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label class="col-md-3 label-control" for="projectinput1">Nome da Empresa</label>
+                                        <label class="col-md-3 label-control" >e-mail</label>
                                         <div class="col-md-9 mx-auto">
-                                            <input type="text" name="cliente_razao_social" value="<?=$c['cliente_razao_social']; ?>"   class="form-control round" placeholder="Digite o nome da Empresa" required>
+                                            <input type="mail" name="user_email"  class="form-control round" value="<?=$c['user_email']; ?>"  required>
                                         </div>
-                                    </div> 
+                                    </div>                                                                      
                                     <div class="form-group row">
-                                        <label class="col-md-3 label-control" for="projectinput1">Inscreição estadual</label>
+                                        <label class="col-md-3 label-control" >Senha</label>
                                         <div class="col-md-9 mx-auto">
-                                            <input type="text" name="cliente_inscricao" value="<?=$c['cliente_inscricao']; ?>"   class="form-control round" placeholder="Digite Inscrição estadual">
-                                        </div>
-                                    </div>                                                                        
-                                    <div class="form-group row">
-                                        <label class="col-md-3 label-control" for="projectinput2">Nome Fantasia</label>
-                                        <div class="col-md-9 mx-auto">
-                                            <input type="text" name="cliente_nome_fantasia" value="<?=$c['cliente_nome_fantasia']; ?>"   class="form-control round" placeholder="Digite o nome fantasia" >
+                                            <input type="password" name="user_password"  class="form-control round">
                                         </div>
                                     </div>
+
                                     <div class="form-group row">
                                         <label class="col-md-3 label-control" >Telefone</label>
                                         <div class="col-md-9 mx-auto">
-                                            <input type="text" name="cliente_telefone" id="telefone" value="<?=$c['cliente_telefone']; ?>"   class="form-control round" placeholder="Digite o telefone" required>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="col-md-3 label-control" >E-mail</label>
-                                        <div class="col-md-9 mx-auto">
-                                            <input type="mail" name="cliente_email" value="<?=$c['cliente_email']; ?>"   class="form-control round" placeholder="Digite seu e-mail" required>
+                                            <input type="mail" name="user_phone"  class="form-control round" value="<?=$c['user_phone']; ?>"required>
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <label class="col-md-3 label-control" >CEP</label>
                                         <div class="col-md-9 mx-auto">
-                                            <input type="text" name="cliente_CEP" id="CEP" value="<?=$c['cliente_CEP']; ?>" class="form-control round" placeholder="Digite o CEP" required>
+                                            <input type="text" name="address_zipcode"  class="form-control round" value="<?=$c['address_zipcode']; ?>" required>
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <label class="col-md-3 label-control" >Logradouro</label>
                                         <div class="col-md-9 mx-auto">
-                                            <input type="text" name="cliente_logradouro" value="<?=$c['cliente_logradouro']; ?>"  class="form-control round" placeholder="Digite o logradouro" required>
+                                            <input type="text" name="address_street"  class="form-control round" value="<?=$c['address_street']; ?>" required>
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <label class="col-md-3 label-control" >Numero</label>
                                         <div class="col-md-9 mx-auto">
-                                            <input type="text" name="cliente_numero" value="<?=$c['cliente_numero']; ?>"  class="form-control round" placeholder="Digite o numero" required>
+                                            <input type="text" name="address_number" class="form-control round" value="<?=$c['address_number']; ?>" required>
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <label class="col-md-3 label-control" >complemento</label>
                                         <div class="col-md-9 mx-auto">
-                                            <input type="text" name="cliente_complemento" value="<?=$c['cliente_complemento']; ?>"  class="form-control round" placeholder="Digite complemento">
+                                            <input type="text" name="address_complement"  class="form-control round" value="<?=$c['address_complement']; ?>">
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <label class="col-md-3 label-control" >Bairro</label>
                                         <div class="col-md-9 mx-auto">
-                                            <input type="text" name="cliente_bairro" value="<?=$c['cliente_bairro']; ?>" class="form-control round" placeholder="Digite bairro" required>
+                                            <input type="text" name="address_neighborhood"  class="form-control round" value="<?=$c['address_neighborhood']; ?>" required>
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <label class="col-md-3 label-control" >Cidade</label>
                                         <div class="col-md-9 mx-auto">
-                                            <input type="text" name="cliente_municipio" value="<?=$c['cliente_municipio']; ?>"  class="form-control round" placeholder="Digite a cidade" required>
+                                            <input type="text" name="address_city" class="form-control round" value="<?=$c['address_city']; ?>" required>
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <label class="col-md-3 label-control" >Estado</label>
                                         <div class="col-md-9 mx-auto">
-                                            <input type="text" name="cliente_uf" value="<?=$c['cliente_uf']; ?>"  class="form-control round" placeholder="Digite se">
+                                            <input type="text" name="address_state" class="form-control round" value="<?=$c['address_state']; ?>" required>
                                         </div>
-                                    </div>                                                                       
+                                    </div>  
+                                    <div class="form-group row">
+                                        <label class="col-md-3 label-control" >país</label>
+                                        <div class="col-md-9 mx-auto">
+                                            <input type="text" name="address_country" class="form-control round" value="<?=$c['address_country']; ?>" required>
+                                        </div>
+                                    </div>                                     
                                     <div class="form-actions">
-                                        <a href="<?= $app->view('lista-clientes'); ?>" class="btn btn-warning mr-1">
+                                        <a href="<?= $app->view('list-client'); ?>" class="btn btn-warning mr-1">
                                             <i class="ft-x"></i> Cancelar
                                         </a>
                                         <button type="submit" class="btn btn-primary">

@@ -1,7 +1,7 @@
 <?php
 	/**
 	* @Atomic framework
-	* @document: Cotrollers de editar União
+	* @document: Cotrollers de União
 	* @version: 1.0.0
 	* @description: 
 	* @author: Chags
@@ -9,21 +9,20 @@
 	*/
 	# autoload application
 	require dirname(dirname(dirname(__DIR__))) . "/autoload.php";
+
 	$app = new Module();
 	# include all modules of default module
 	$app->loadModels('panel');
 
-    $data = new Clientes();
+    $data = new Client();
 
-    $log = $data->AtualizarCliente();
-
-
-	//print_r($log);
+    $log = $data->InsertClient();
 
     
   if( $log["erro"] == false ){
-    header("location: " . $app->index() . "/panel/lista-clientes" . Helper::notification(true,$log["mensagem"]));
+    header("location: " . $app->index() . "/panel/list-client" . Helper::notification(true,$log["mensagem"]));
 }else{
-    header("location: " . $app->index() . "/panel/lista-clientes" . Helper::notification(false, $log["mensagem"]));
+    header("location: " . $app->index() . "/panel/list-client" . Helper::notification(false, $log["mensagem"]));
 }
- 
+
+

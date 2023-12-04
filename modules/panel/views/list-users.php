@@ -1,7 +1,7 @@
 <?php
 $app = new Module();
-$data = new User();
-$lista = $data->ListUsers();
+$data = new Client();
+$lista = $data->ListClient();
 //print_r($lista);
 ?>
 <div class="content-header-right col-md-6 col-12">

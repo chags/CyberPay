@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 03/12/2023 às 21:15
+-- Tempo de geração: 04/12/2023 às 04:49
 -- Versão do servidor: 10.4.28-MariaDB
 -- Versão do PHP: 8.2.4
 
@@ -29,14 +29,23 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `address` (
   `id_address` int(11) NOT NULL,
+  `address_zipcode` varchar(9) DEFAULT NULL,
+  `address_user_id` int(11) DEFAULT NULL,
   `address_street` varchar(150) DEFAULT NULL,
   `address_number` varchar(11) DEFAULT NULL,
   `address_complement` varchar(50) DEFAULT NULL,
   `address_neighborhood` varchar(100) DEFAULT NULL,
-  `neighborhood_city` varchar(50) DEFAULT NULL,
-  `neighborhood_state` varchar(50) DEFAULT NULL,
-  `neighborhood_country` varchar(30) DEFAULT NULL
+  `address_city` varchar(50) DEFAULT NULL,
+  `address_state` varchar(50) DEFAULT NULL,
+  `address_country` varchar(30) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Despejando dados para a tabela `address`
+--
+
+INSERT INTO `address` (`id_address`, `address_zipcode`, `address_user_id`, `address_street`, `address_number`, `address_complement`, `address_neighborhood`, `address_city`, `address_state`, `address_country`) VALUES
+(1, '61652500', 4, 'rua colina', '11', '', 'juju', 'caucaia', 'ce', 'brazil');
 
 -- --------------------------------------------------------
 
@@ -120,9 +129,17 @@ CREATE TABLE `order` (
 
 CREATE TABLE `package` (
   `id_package` int(11) NOT NULL,
-  `package_name` varchar(100) DEFAULT NULL,
   `package_description` text DEFAULT NULL,
-  `package_price` varchar(11) DEFAULT NULL
+  `package_price` varchar(11) DEFAULT NULL,
+  `packageName` varchar(50) DEFAULT NULL,
+  `diskSpace` int(11) DEFAULT NULL,
+  `bandwidth` int(11) DEFAULT NULL,
+  `dataBases` int(11) DEFAULT NULL,
+  `ftpAccounts` int(11) DEFAULT NULL,
+  `emails` int(11) DEFAULT NULL,
+  `allowedDomains` int(11) DEFAULT NULL,
+  `api` bit(1) DEFAULT NULL,
+  `allowFullDomain` bit(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -140,10 +157,9 @@ CREATE TABLE `user` (
   `user_image` varchar(150) DEFAULT NULL,
   `user_language` varchar(6) DEFAULT NULL,
   `user_office_id` int(11) DEFAULT NULL,
-  `user_campany__id` int(11) DEFAULT NULL,
-  `user_address_id` int(11) DEFAULT NULL,
+  `user_campany_id` int(11) DEFAULT NULL,
   `user_session` int(11) DEFAULT NULL,
-  `user_status` int(11) DEFAULT NULL,
+  `user_status` tinyint(1) DEFAULT NULL,
   `user_date` datetime NOT NULL DEFAULT current_timestamp(),
   `user_date_update` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -152,8 +168,28 @@ CREATE TABLE `user` (
 -- Despejando dados para a tabela `user`
 --
 
-INSERT INTO `user` (`id_user`, `user_name`, `user_email`, `user_password`, `user_phone`, `user_image`, `user_language`, `user_office_id`, `user_campany__id`, `user_address_id`, `user_session`, `user_status`, `user_date`, `user_date_update`) VALUES
-(1, 'cristiano', 'cristiano.chagas@th7.com.br', '661285f2e15c689a000d6c62c83990b3', '85999593777', NULL, 'pt_BR', 2, 1, NULL, 1, NULL, '2023-12-01 23:36:29', '2023-12-02 03:40:32');
+INSERT INTO `user` (`id_user`, `user_name`, `user_email`, `user_password`, `user_phone`, `user_image`, `user_language`, `user_office_id`, `user_campany_id`, `user_session`, `user_status`, `user_date`, `user_date_update`) VALUES
+(1, 'cristiano', 'cristiano.chagas@th7.com.br', '661285f2e15c689a000d6c62c83990b3', '85999593777', NULL, 'pt_BR', 2, 1, 1, NULL, '2023-12-01 23:36:29', '2023-12-02 03:40:32'),
+(4, 'lorena m santos chagas', 'lorena@th7.com.br', 'dbc4d84bfcfe2284ba11beffb853a8c4', '85999459377', NULL, NULL, 1, NULL, 4, 1, '2023-12-03 18:52:01', '2023-12-04 01:32:43');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `website`
+--
+
+CREATE TABLE `website` (
+  `id_website` int(11) NOT NULL,
+  `wesite_user_id` int(11) DEFAULT NULL,
+  `domainName` varchar(150) NOT NULL,
+  `package` varchar(50) DEFAULT NULL,
+  `adminEmail` varchar(150) DEFAULT NULL,
+  `phpSelection` varchar(5) DEFAULT NULL,
+  `websiteOwner` varchar(20) DEFAULT NULL,
+  `ssl` tinyint(1) DEFAULT NULL,
+  `dkimCheck` tinyint(1) DEFAULT NULL,
+  `openBasedir` tinyint(1) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Índices para tabelas despejadas
@@ -202,6 +238,12 @@ ALTER TABLE `user`
   ADD PRIMARY KEY (`id_user`);
 
 --
+-- Índices de tabela `website`
+--
+ALTER TABLE `website`
+  ADD PRIMARY KEY (`id_website`);
+
+--
 -- AUTO_INCREMENT para tabelas despejadas
 --
 
@@ -209,7 +251,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT de tabela `address`
 --
 ALTER TABLE `address`
-  MODIFY `id_address` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_address` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de tabela `company`
@@ -245,7 +287,13 @@ ALTER TABLE `package`
 -- AUTO_INCREMENT de tabela `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT de tabela `website`
+--
+ALTER TABLE `website`
+  MODIFY `id_website` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
