@@ -16,15 +16,15 @@
 	# include all modules of default module
 	$app->loadModels('panel');
 
-    $data = new Produtos();
+    $data = new Package();
 
-    $log = $data->InserirProdutos();
+    $log = $data->UpdatePackage();
 
     
   if( $log["erro"] == false ){
-    header("location: " . $app->index() . "/panel/listar-produtos" . Helper::notification(true,$log["mensagem"]));
+    header("location: " . $app->index() . "/panel/list-packages" . Helper::notification(true,$log["mensage"]));
 }else{
-    header("location: " . $app->index() . "/panel/inserir-produtos" . Helper::notification(false, $log["mensagem"]));
+    header("location: " . $app->index() . "/panel/list-packages" . Helper::notification(false, $log["mensage"]));
 }
 
 

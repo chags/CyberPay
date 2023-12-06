@@ -1,8 +1,8 @@
 <?php
 $template = new TEngine();
 $app = new Module();
-//$data = new Produtos();
-//$lista = $data->EditarProdutos($app->uri(3));
+$data = new Package();
+$list = $data->ListPackages();
 ?>
 
             <div class="content-body">
@@ -22,6 +22,25 @@ $app = new Module();
                                 </div>
                             </div>
                         </div>
+                        <?php foreach ($list as $c) : ?>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h2 class="text-center"><?=$c['packageName']; ?></h2>
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="card-body text-center">>                                                                               
+                                            <p><?=$c['packageName']; ?></p>
+                                            <p><?=$c['diskSpace']; ?></p>
+                                            <p><?=$c['bandwidth']; ?></p>
+                                            <p><?=$c['data_Bases']; ?></p>
+                                            <p><?=$c['ftpAccounts']; ?></p>                                                                                       
+                                            <a href="<?=$app->view('pay'); ?>" class="badge badge-primary">Criar Painel</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> 
+                        <?php endforeach; ?>                    
                     </div>
                 </section>
 </div>

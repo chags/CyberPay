@@ -104,6 +104,21 @@
 				'file' 	  => 'list-packages',
 			    'packages' => ['modern-table']				
 			],
+			'insert-package' => [
+				'title'   => 'Lista Pacotes',
+				'file' 	  => 'insert-package',
+			    'packages' => ['modern-table']				
+			],	
+			'insert-price' => [
+				'title'   => 'Editar peços',
+				'file' 	  => 'insert-price',
+			    'packages' => ['modern-table']				
+			],			
+			'edit-package' => [
+				'title'   => 'Editar Pacotes',
+				'file' 	  => 'edit-package',
+			    'packages' => ['modern-table']				
+			],				
 			'list-sites' => [
 				'title'   => 'Lista Sites',
 				'file' 	  => 'list-sites',

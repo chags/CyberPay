@@ -38,19 +38,23 @@ $lista = $data->ListPackages();
                                             <thead>
                                                 <tr>
                                                     <th>ID</th>
-                                                    <th>Pacote</th>   
-                                                    <th>Controles</th>                                                                                                       
+                                                    <th>Pacote</th>                                                    
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <?php foreach($lista as $c): ?> 
                                                 <tr>
+                                                
                                                     <td><?=$c['id_package']; ?></td>
-                                                    <td><?=$c['packageName']; ?></td>                                       
+                                                    <td><?=$c['package_name']; ?></td>                                                    
                                                     <td>   
                                                         <div class="btn-group">
-                                                            <a class="btn btn-success" data-toggle="tooltip" data-original-title="editar" data-placement="top" href="<?=$app->view('edit-package/'.$c['id_package']); ?>"><i class="la la-edit"></i></a>
-                                                            <a class="btn btn-info" data-toggle="tooltip" data-original-title="preços" data-placement="top" href="<?=$app->view('insert-price/'.$c['id_package']); ?>"><i class="la la-money"></i></a>
+                                                            <a class="btn btn-success" data-toggle="tooltip" data-original-title="editar" data-placement="top" href="<?=$app->view('editar/'.$c['id_package'], 'package'); ?>"><i class="la la-edit"></i></a>
+                                                            <a class="btn btn-info" data-toggle="tooltip" data-original-title="configuracao" data-placement="top" href="<?=$app->view('editar-configuracao/'.$c['id_package']); ?>"><i class="la la-cogs"></i></a>
+                                                            <form action="<?=$app->controller('pdf'); ?>" method="POST">
+                                                            <input type="hidden" name="id_package" value="<?=$c['id_package']; ?>">
+                                                            <button class="btn btn-danger" data-toggle="tooltip" data-original-title="gerar pdf" data-placement="top" type="submit"><i class="la la-file"></i></button>
+                                                            </form>
                                                         </div>
                                                     </td>
                                                 </tr>
